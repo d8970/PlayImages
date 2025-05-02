@@ -55,6 +55,10 @@ import cv2
 
 
 def create_intermediate_images(image_path1, image_path2, num_intermediates=5, out_folder='.'):
+	# do nothing for now
+	print(f"doing nothing ...")
+	return
+	
 	# Load the images
 	img1 = Image.open(image_path1).convert('RGBA')
 	img2 = Image.open(image_path2).convert('RGBA')
