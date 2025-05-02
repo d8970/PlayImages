@@ -129,10 +129,10 @@ def create_movie(image_folder, output_path, fps=30):
 	video_writer.release()
 
 # create intermediate images using image1 and image2 and save them in the out_folder
-create_intermediate_images(image1, image2, num_intermediates=5, out_folder=out_folder)
+# create_intermediate_images(image1, image2, num_intermediates=5, out_folder=out_folder)
 
 # create a 10-second movie from the intermediate images
-create_movie(out_folder, 'output.mp4', fps=30)
+# create_movie(out_folder, 'output.mp4', fps=30)
 
 from astropy.io import fits
 import os
