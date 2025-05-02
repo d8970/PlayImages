@@ -43,7 +43,7 @@ def find_image_differences(image_path1, image_path2):
         return
 
 
-main_folder = '/Users/mel675/Documents/fstau/aug23/'
+main_folder = '/Users/myuser/Documents/fstau/aug23/'
 image1 =  os.path.join(main_folder,'1996.jpg')
 image2 = os.path.join(main_folder,'1997.jpg')
 out_folder = os.path.join(main_folder,'output')
@@ -157,4 +157,4 @@ def show_fits_info(fits_file_path):
             print(repr(hdul[i].header))
 
 # Example usage
-# show_fits_info('/Users/mel675/Documents/fits/jw01373014001_03101_00001_nrcb4_rate.fits')
+# show_fits_info('/Users/myuser/Documents/fits/jw01373014001_03101_00001_nrcb4_rate.fits')
