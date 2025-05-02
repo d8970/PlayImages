@@ -1,3 +1,3 @@
-def test_example():
-    assert 1 + 1 == 2
-
+def test_my_logic():
+    print("Running my logic test")
+    assert 1 == 1
