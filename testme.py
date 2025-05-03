@@ -2,10 +2,7 @@ from PIL import Image
 import numpy as np
 import logging, os
 
-logging.basicConfig(level=logging.DEBUG)
-logging.info('This is a test message')
-
-
+logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(message)s', force=True)
 
 def find_image_differences(image_path1, image_path2):
 
