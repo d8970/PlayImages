@@ -6,7 +6,7 @@ def test_intermediate_images_creation(tmp_path):
 
     # Setup dummy input paths and output path
     # You'd usually prepare some small test images here
-    image_1 = tmp_path / "1996.jpg"
+    image_1 = "1996.jpg"
     dummy_image = tmp_path / "dummy.png"
     dummy_image.write_bytes(b"FakeImageData")  # Replace with real image data in practice
 
