@@ -61,6 +61,10 @@ def create_intermediate_images(image_path1, image_path2, num_intermediates=5, ou
 	else:
 	    print(f"File {image_path1} does not exist.")
 
+	if os.path.exists(image_path2):
+	    print(f"File {image_path2} exists!")
+	else:
+	    print(f"File {image_path2} does not exist.")
 	return
 	
 	# Load the images
