@@ -1,4 +1,4 @@
-from testme import create_intermediate_images
+from testme import create_intermediate_images, create_movie
 
 def test_intermediate_images_creation(tmp_path):
 
