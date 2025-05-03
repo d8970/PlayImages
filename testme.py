@@ -57,6 +57,7 @@ import cv2
 def create_intermediate_images(image_path1, image_path2, num_intermediates=5, out_folder='.'):
 	# do nothing for now
 	print(f"doing nothing ...")
+	logging.info("from logging")
 	return
 	
 	# Load the images
