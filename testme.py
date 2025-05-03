@@ -114,26 +114,37 @@ def move_dots(image_array):
 
 	return image_array
 
+import os
+import cv2
+
 def create_movie(image_folder, output_path, fps=30):
-	# Get the list of image files in the folder
-	image_files = sorted([f for f in os.listdir(image_folder) if f.endswith('.png')])
+    # Get all PNG files sorted by name
+    image_files = sorted([
+        f for f in os.listdir(image_folder)
+        if f.endswith('.png')
+    ])
 
-	# Read the first image to get the size
-	first_image = cv2.imread(os.path.join(image_folder, image_files[0]))
-	height, width, _ = first_image.shape
+    if not image_files:
+        print("No images found in the folder.")
+        return
 
-	# Create a VideoWriter object
-	fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-	video_writer = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+    # Read the first image to get dimensions
+    first_image_path = os.path.join(image_folder, image_files[0])
+    first_image = cv2.imread(first_image_path)
+    height, width, _ = first_image.shape
 
-	# Write each image to the video file
-	for image_file in image_files:
-		image_path = os.path.join(image_folder, image_file)
-		image = cv2.imread(image_path)
-		video_writer.write(image)
+    # Set up the video writer
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # or 'XVID' for .avi
+    video = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
-	# Release the VideoWriter object
-	video_writer.release()
+    # Write each image to the video
+    for image_file in image_files:
+        frame = cv2.imread(os.path.join(image_folder, image_file))
+        video.write(frame)
+
+    video.release()
+    print(f"Movie saved to {output_path}")
+
 
 # create intermediate images using image1 and image2 and save them in the out_folder
 # create_intermediate_images(image1, image2, num_intermediates=5, out_folder=out_folder)
