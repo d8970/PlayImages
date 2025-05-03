@@ -8,8 +8,6 @@ def test_intermediate_images_creation(tmp_path):
     # You'd usually prepare some small test images here
     image_1 = "1996.jpg"
     image_2 = "1997.jpg"
-    dummy_image = tmp_path / "dummy.png"
-    dummy_image.write_bytes(b"FakeImageData")  # Replace with real image data in practice
 
     # This won't work without real image data, but shows the structure
     try:
