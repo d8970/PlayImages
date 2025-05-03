@@ -42,3 +42,9 @@ jobs:
       with:
         name: intermediate-images
         path: /tmp/pytest-of-runner/**/intermediate_*.png
+    - name: Upload transition video
+      uses: actions/upload-artifact@v4
+      with:
+        name: transition-video
+        path: transition.mp4
+
