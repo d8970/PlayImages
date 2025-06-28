@@ -6,8 +6,8 @@ def test_intermediate_images_creation(tmp_path):
 
     # Setup dummy input paths and output path
     # You'd usually prepare some small test images here
-    image_1 = "1996.jpg"
-    image_2 = "1997.jpg"
+    image_1 = "start.jpg"
+    image_2 = "end.jpg"
 
     # This won't work without real image data, but shows the structure
     try:
